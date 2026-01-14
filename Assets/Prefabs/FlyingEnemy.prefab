@@ -120,7 +120,6 @@ GameObject:
   - component: {fileID: 7987518665399875020}
   - component: {fileID: 4719615034188152859}
   - component: {fileID: 1257328116659184373}
-  - component: {fileID: -2331760805669072176}
   m_Layer: 0
   m_Name: FlyingEnemy
   m_TagString: FlyingEnemy
@@ -349,8 +348,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _particleSystem: {fileID: 7610050818546801586, guid: 81edb37ee0a519644b01e5752821947d, type: 3}
-  purseCounter: {fileID: 0}
-  aIDestinationSetter: {fileID: 0}
+  aIDestinationSetter: {fileID: 979669186533264297}
   playerHealthManager: {fileID: 0}
   circleCollider2D: {fileID: 95179082711054011}
   animator: {fileID: 4707264102870309504}
@@ -359,8 +357,8 @@ MonoBehaviour:
   magicMisileDamage: 15
   fireBallDamage: 50
   hitDelay: 0.6
-  pointWorth: 35
   eHealthBar: {fileID: 3936825302676163599}
+  levelingManager: {fileID: 0}
 --- !u!114 &4719615034188152859
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -401,19 +399,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &-2331760805669072176
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3195146300658736258}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 777ac6591b222bb44a3964fcda264f8e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pointText: {fileID: 0}
 --- !u!1 &4814326624089795221
 GameObject:
   m_ObjectHideFlags: 0

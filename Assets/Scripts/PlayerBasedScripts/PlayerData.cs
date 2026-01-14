@@ -12,7 +12,7 @@ public class PlayerData
     public PlayerData (LevelingManager player)
     {
         level = player.level;
-        totalExperience = player.totalExperience;
+        totalExperience = player.currentXp;
 
     }
 

@@ -34,7 +34,8 @@ public class UIManagerScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        TotalXpDisplayText.text = playerData.totalExperience.ToString();
+        int maxXp = playerData.GetXpForNextLevel();
+        TotalXpDisplayText.text = playerData.currentXp.ToString() + "/" + maxXp + "Xp";
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             if (gameIsPaused)
@@ -51,7 +52,7 @@ public class UIManagerScript : MonoBehaviour
     public void GameOver()
     {
         gameOverScreenUI.SetActive(true);
-        totalXpText.text = playerData.totalExperience.ToString();
+        totalXpText.text = playerData.currentXp.ToString();
         
         Time.timeScale = 0.40f;
     }

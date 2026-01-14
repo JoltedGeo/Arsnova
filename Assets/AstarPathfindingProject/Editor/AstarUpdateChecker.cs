@@ -1,3 +1,4 @@
+#define ASTAR_NO_UPDATES
 using UnityEngine;
 using UnityEditor;
 #if UNITY_2018_1_OR_NEWER

@@ -1,8 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.Mathematics;
-using Unity.VisualScripting;
-using Unity.VisualScripting.Dependencies.Sqlite;
 using UnityEngine;
 
 public class Casting : MonoBehaviour
@@ -10,7 +7,6 @@ public class Casting : MonoBehaviour
     public ManaBar manaBar;
     public FireballUITimer fireballUITimer;
     public PlayerMovement playerMovement;
-
     private Camera mainCam;
     private Vector3 mousePos;
     public GameObject magicMisile;

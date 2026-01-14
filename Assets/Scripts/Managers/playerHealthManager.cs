@@ -11,11 +11,13 @@ public class PlayerHealthManager : MonoBehaviour
     public int maxHealth = 100;
     public int currentHealth;
     private Rigidbody2D rb;
-    private bool isDead;
+    public bool isDead;
     public int healthRechargeRate = 10;
     public float healthDelay = 2f;
     private float healthDelayTimer;
     public HealthBar healthBar;
+
+    public UIManagerScript uIManager;
 
     // Start is called before the first frame update
     void Start()
@@ -53,6 +55,7 @@ public class PlayerHealthManager : MonoBehaviour
     void DestroyPlayer()
     {
         isDead = true;
+        uIManager.GameOver();
         FindObjectOfType<AudioManager>().Play("FlyingEnemyDeath");
         particleSysteminstance = Instantiate(_particleSystem, transform.position, Quaternion.identity);
         Destroy(gameObject);

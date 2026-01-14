@@ -10,7 +10,6 @@ public class FEHealthManager : MonoBehaviour
 {
     [SerializeField] private ParticleSystem _particleSystem;
     private ParticleSystem particleSysteminstance;
-    public pursecounter purseCounter;
     public AIDestinationSetter aIDestinationSetter;
     public PlayerHealthManager playerHealthManager;
     public CircleCollider2D circleCollider2D;
@@ -22,7 +21,6 @@ public class FEHealthManager : MonoBehaviour
     private int flyingEnemyDamage = 20;
     private float hitDelayTimer;
     public float hitDelay = 0.4f;
-    public int pointWorth = 35;
     private bool isDead;
 
     public HealthBar eHealthBar;
@@ -31,7 +29,6 @@ public class FEHealthManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        purseCounter = GameObject.FindGameObjectWithTag("HUDManager").GetComponent<pursecounter>();
         aIDestinationSetter = GetComponent<AIDestinationSetter>();
         // Debugging to determine if the script refrence isn't in the inspector
         GameObject playerObject = GameObject.FindGameObjectWithTag("Player");
@@ -99,7 +96,6 @@ public class FEHealthManager : MonoBehaviour
     {
         FindObjectOfType<AudioManager>().Play("FlyingEnemyDeath");
         particleSysteminstance = Instantiate(_particleSystem, transform.position, Quaternion.identity);
-        purseCounter.Points += pointWorth;
         Destroy(gameObject);
     }
 

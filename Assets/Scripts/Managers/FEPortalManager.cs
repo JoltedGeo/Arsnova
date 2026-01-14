@@ -6,6 +6,7 @@ public class FEPortalManager : MonoBehaviour
 {
     [SerializeField] List<GameObject> portalSpawns = new List<GameObject>();
     public GameObject FEPrefab;
+    public PlayerHealthManager playerHealthManager;
 
     public int portalSpawnersAmount;
     public float spawnRate = 5;
@@ -28,7 +29,7 @@ public class FEPortalManager : MonoBehaviour
 
             int randomPortal = Random.Range(0, portalSpawnersAmount);
 
-            if (portalSpawns.Count > randomPortal)
+            if (portalSpawns.Count > randomPortal && !playerHealthManager.isDead)
             {
                 GameObject specificGameObject = portalSpawns[randomPortal];
                 Debug.Log("Picked: " + specificGameObject + randomPortal);

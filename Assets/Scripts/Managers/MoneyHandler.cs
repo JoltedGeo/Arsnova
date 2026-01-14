@@ -6,8 +6,6 @@ using UnityEngine.UIElements;
 
 public class MoneyHandler : MonoBehaviour
 {
-    [SerializeField] PointCounter pointCounter;
-    [SerializeField] pursecounter purseCounter;
     public float purse = 0;               // Value that increases each press
     public float rechargeDelay = .5f;    // Time (seconds) before you can press again
 

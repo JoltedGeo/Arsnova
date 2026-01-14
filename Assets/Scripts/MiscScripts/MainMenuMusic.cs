@@ -7,7 +7,9 @@ public class MainMenuMusic : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        FindObjectOfType<AudioManager>().Play("MainMenuMusic");
+        //Remeber if you add anymore level musics, add them to each .stop()In each level musicstart gameObjects
+        AudioManager.instance.Stop("FirstLevelMusic");
+        AudioManager.instance.Play("MainMenuMusic");
     }
 
     // Update is called once per frame

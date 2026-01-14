@@ -128,7 +128,7 @@ public class PlayerMovement : MonoBehaviour
         bool isFalling = rb.velocity.y < fastFallThreshold;
         bool holdingDown = Input.GetKey(KeyCode.S);
 
-        if (!isGrounded && isFalling && holdingDown)
+        if (!isGrounded && holdingDown)
         {
             //Increase Gravity
             rb.gravityScale = Mathf.MoveTowards(rb.gravityScale, maxGravity, gravityIncreaseSpeed * Time.fixedDeltaTime);

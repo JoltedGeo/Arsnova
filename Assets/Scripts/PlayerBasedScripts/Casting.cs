@@ -24,8 +24,7 @@ public class Casting : MonoBehaviour
     public bool canCastFireBall;
     public int fireBallCost = 30;
 
-
-
+    public UIManagerScript uIManagerScript;
     //Resources
     public int currentMana;
     public int maxMana = 100;
@@ -73,16 +72,26 @@ public class Casting : MonoBehaviour
         canCastFireBall = true;     
     }
 
+    //Check if game is paused
+
     // Update is called once per frame
     void Update()
     {
-        mousePos = mainCam.ScreenToWorldPoint(Input.mousePosition);
 
-        Vector3 rotation = mousePos - transform.position;
+        if (!uIManagerScript.gameIsPaused)
+        {
+            mousePos = mainCam.ScreenToWorldPoint(Input.mousePosition);
 
-        float rotZ = Mathf.Atan2(rotation.y, rotation.x) * Mathf.Rad2Deg;
+            Vector3 rotation = mousePos - transform.position;
 
-        transform.rotation = Quaternion.Euler(0, 0, rotZ);
+            float rotZ = Mathf.Atan2(rotation.y, rotation.x) * Mathf.Rad2Deg;
+
+            transform.rotation = Quaternion.Euler(0, 0, rotZ);
+        }
+        else
+        {
+            return;
+        }
 
         // Mana regeneration
         if (!isFocusing)

@@ -82,13 +82,13 @@ MonoBehaviour:
     pitch: 1
     source: {fileID: 0}
   - name: MainMenuMusic
-    loop: 0
+    loop: 1
     clip: {fileID: 8300000, guid: db6909710bc2d1146982dac9c3dbd09d, type: 3}
     volume: 0.1
     pitch: 1
     source: {fileID: 0}
   - name: FirstLevelMusic
-    loop: 0
+    loop: 1
     clip: {fileID: 8300000, guid: 10d6b49873ccd9541823d5efa7e1fad8, type: 3}
     volume: 0.1
     pitch: 1

@@ -11,6 +11,7 @@ TagManager:
   - FlyingEnemy
   - HUDManager
   - FireBall
+  - DataHolder
   layers:
   - Default
   - TransparentFX
